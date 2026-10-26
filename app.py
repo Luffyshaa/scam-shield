@@ -2,7 +2,7 @@ import html
 
 import streamlit as st
 from image_processor import OCRProcessingError, extract_text_from_image
-from scam_detector import analyze_message
+from scam_detector import VERDICT_CLEAR, analyze_message
 
 st.set_page_config(
     page_title="Scam Shield",
@@ -46,7 +46,7 @@ st.markdown(
     .result-card.caution { background: #fff8e6; border-color: #dda72b; }
     .result-card.safe { background: #edf9f1; border-color: #4c9f67; }
     .result-title { font-size: 1.65rem; font-weight: 800; margin-bottom: 0.35rem; }
-    .result-score { font-size: 1rem; font-weight: 700; opacity: 0.75; margin-bottom: 0.55rem; }
+    .result-level { font-size: 1rem; font-weight: 700; opacity: 0.75; margin-bottom: 0.55rem; }
     .tip-card {
         background: #f5f7fa; border-radius: 14px; padding: 1rem; margin-bottom: 0.7rem;
     }
@@ -95,6 +95,11 @@ input_mode = st.radio(
     horizontal=True,
 )
 
+channel = st.selectbox(
+    "How did this reach you?",
+    ["Text message", "Email", "Phone call", "Pop-up on screen", "Social media or other"],
+)
+
 message = ""
 
 if input_mode == "✍️ Paste text":
@@ -141,22 +146,17 @@ if check_clicked:
     if not message.strip():
         st.warning("Please paste a message or upload a readable screenshot/photo first.")
     else:
-        result = analyze_message(message)
+        result = analyze_message(message, channel=channel)
         verdict = result["verdict"]
 
-        if verdict == "LIKELY SCAM":
-            card_class = "scam"
-        elif verdict == "BE CAREFUL":
-            card_class = "caution"
-        else:
-            card_class = "safe"
+        card_class = result["card_class"]
 
         st.markdown("### 2. Your result")
         st.markdown(
             f"""
             <div class="result-card {card_class}">
                 <div class="result-title">{html.escape(result['emoji'])} {html.escape(verdict)}</div>
-                <div class="result-score">Risk score: {result['score']}</div>
+                <div class="result-level">Risk level: {html.escape(result['level'])}</div>
                 <div>{html.escape(result['summary'])}</div>
             </div>
             """,
@@ -166,7 +166,7 @@ if check_clicked:
         st.markdown("### Why Scam Shield noticed these warning signs")
         if result["red_flags"]:
             for flag in result["red_flags"]:
-                with st.expander(f"⚠️ {flag['title']}  (+{flag['score']})"):
+                with st.expander(f"⚠️ {flag['title']}"):
                     st.write(flag["explanation"])
         else:
             st.info(
@@ -193,11 +193,23 @@ if check_clicked:
             label_visibility="collapsed",
         )
 
-        if verdict != "NO OBVIOUS RED FLAGS":
+        if verdict != VERDICT_CLEAR:
             st.warning(
                 "Do not use phone numbers, links, or contact details from the suspicious message itself. "
                 "Find the official contact information independently."
             )
+
+with st.expander("I already paid or shared information. What do I do now?"):
+    st.write("Stop contact with the sender. Do not send more money, even if someone promises to recover it for a fee.")
+    st.write("If you paid, contact your bank or payment provider immediately using its official app or a number you trust. Ask whether the payment can be stopped or disputed.")
+    st.write("If you shared a password or code, use the real website or app to change your password and review account access. Contact the account provider for help.")
+    st.write("If you allowed remote access, disconnect the device from the internet and get help from a trusted technician. Use a different trusted device to secure your accounts.")
+    st.write("If you shared identity information, contact the affected organization and ask about identity-theft recovery and credit protection. Ask someone you trust to help.")
+
+with st.expander("Reporting and help"):
+    st.write("In the United States, you can report scams to the Federal Trade Commission and internet crime to the FBI's Internet Crime Complaint Center (IC3). Find their official government websites independently.")
+    st.write("Outside the United States, contact your local consumer-protection agency or police through official channels.")
+    st.write("Save relevant messages and payment details privately for your bank or an official report. Do not send them back to the suspicious sender.")
 
 st.divider()
 st.markdown(

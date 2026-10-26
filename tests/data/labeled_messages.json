@@ -1,0 +1,372 @@
+[
+  {
+    "id": "irs_gift_card",
+    "label": "scam",
+    "text": "This is the IRS. You owe back taxes and a warrant has been issued for your arrest. Pay immediately with gift cards or you will be arrested today."
+  },
+  {
+    "id": "ssa_suspended",
+    "label": "scam",
+    "text": "Social Security Administration: your number has been suspended due to suspicious activity. Call 1-888-555-0142 now to avoid legal action."
+  },
+  {
+    "id": "grandson_jail",
+    "label": "scam",
+    "text": "Grandma it's me, I'm in jail after a car accident. I need bail money. Please don't tell mom and dad. Send $2,000 today."
+  },
+  {
+    "id": "new_number",
+    "label": "scam",
+    "text": "Hi Mom, I dropped my phone in the lake, this is my new number. Can you text me back? I need help paying a bill."
+  },
+  {
+    "id": "amazon_charge",
+    "label": "scam",
+    "text": "Amazon: you were charged $499.99 for an iPhone order. If you did not make this purchase call 1-855-555-0188 to dispute the charge."
+  },
+  {
+    "id": "ms_virus",
+    "label": "scam",
+    "text": "WARNING: Virus detected! Your computer is infected. Do not shut down. Call Microsoft support at 1-800-555-0123 immediately."
+  },
+  {
+    "id": "usps_fee",
+    "label": "scam",
+    "text": "USPS: your package could not be delivered. Pay the unpaid redelivery fee here: bit.ly/3xYzAb"
+  },
+  {
+    "id": "toll_text",
+    "label": "scam",
+    "text": "E-ZPass: you have an outstanding toll balance of $12.40. Pay now to avoid a late fee: https://e-zpass-billing.top/pay"
+  },
+  {
+    "id": "safe_account",
+    "label": "scam",
+    "text": "This is your bank's fraud department. Hackers are in your account. For your protection, move your savings to a safe account we will set up for you."
+  },
+  {
+    "id": "investment",
+    "label": "scam",
+    "text": "Join our crypto trading group. Guaranteed returns of 40% per month, risk-free. Message me to start."
+  },
+  {
+    "id": "wrong_number",
+    "label": "scam",
+    "text": "Hi, sorry, I think I texted the wrong number. Do we know each other? You seem very kind."
+  },
+  {
+    "id": "romance",
+    "label": "scam",
+    "text": "My love, I am deployed overseas and cannot video call. I need you to send $1,500 so I can come home to you."
+  },
+  {
+    "id": "lottery",
+    "label": "scam",
+    "text": "Congratulations! You have won the national sweepstakes. Pay the processing fee of $250 to claim your prize."
+  },
+  {
+    "id": "utility",
+    "label": "scam",
+    "text": "Your electric power will be disconnected today unless you pay your balance within 2 hours. Call to pay now."
+  },
+  {
+    "id": "remote",
+    "label": "scam",
+    "text": "Please install AnyDesk so I can connect to your computer and fix the problem with your account."
+  },
+  {
+    "id": "medicare",
+    "label": "scam",
+    "text": "Medicare: your new card is ready. Confirm your Medicare number and date of birth to avoid your benefits expiring."
+  },
+  {
+    "id": "recovery",
+    "label": "scam",
+    "text": "We can recover your lost bitcoin investment. A small recovery fee is required to begin."
+  },
+  {
+    "id": "job_check",
+    "label": "scam",
+    "text": "Work from home job offer! We will send you a check to cash. Buy the equipment and send back the rest."
+  },
+  {
+    "id": "overpayment",
+    "label": "scam",
+    "text": "We accidentally sent you too much. Please send back the difference by Zelle immediately."
+  },
+  {
+    "id": "paypal_lookalike",
+    "label": "scam",
+    "text": "PayPal: your account has been limited. Verify your account at https://paypal-secure-login.xyz/verify"
+  },
+  {
+    "id": "otp_request",
+    "label": "scam",
+    "text": "I'm from your bank. We sent you a code by text. Please read me the verification code to confirm your identity."
+  },
+  {
+    "id": "geek_squad",
+    "label": "scam",
+    "text": "Geek Squad: your subscription has been renewed for $349.99. To cancel and get a refund call 1-844-555-0177."
+  },
+  {
+    "id": "boss_gift_cards",
+    "label": "scam",
+    "text": "I'm in a meeting and need you to buy gift cards for clients today. Keep this between us and send me the codes."
+  },
+  {
+    "id": "bank_locked",
+    "label": "scam",
+    "text": "Chase alert: your account is locked due to unusual activity. Verify your account at http://chase-secure-login.top now."
+  },
+  {
+    "id": "l33t",
+    "label": "scam",
+    "text": "Y0u have been selected! Buy g1ft cards and read me the numbers to claim your pr1ze."
+  },
+  {
+    "id": "ip_link",
+    "label": "scam",
+    "text": "Your account is suspended. Click the link to verify your identity: http://192.168.44.12/login"
+  },
+  {
+    "id": "apple_id_lock",
+    "label": "scam",
+    "text": "Your Apple ID has been locked. Sign in at apple-id-support.click to restore access."
+  },
+  {
+    "id": "norton_renew",
+    "label": "scam",
+    "text": "Dear customer, your Norton subscription auto-renewed for $399. Call 1-866-555-0100 for a refund."
+  },
+  {
+    "id": "grandpa_mexico",
+    "label": "scam",
+    "text": "Hello Grandpa, I'm in trouble, got into an accident in Mexico. Please wire money to my lawyer and don't tell Dad."
+  },
+  {
+    "id": "medicare_final",
+    "label": "scam",
+    "text": "Final notice: Medicare benefits will be suspended unless you verify your information today."
+  },
+  {
+    "id": "ssn_stimulus",
+    "label": "scam",
+    "text": "Pls send ur SSN and bank account number so we can deposit your stimulus payment."
+  },
+  {
+    "id": "refund_842",
+    "label": "scam",
+    "text": "You are eligible for a refund of $842. Reply with your bank account number to receive it."
+  },
+  {
+    "id": "sheriff_bitcoin",
+    "label": "scam",
+    "text": "I am Sgt. Miller with the sheriff's office. There is a warrant for you for missing jury duty. Pay a fine at once with bitcoin."
+  },
+  {
+    "id": "ai_trading",
+    "label": "scam",
+    "text": "Invest with our AI trading platform, 3% daily profit, can't lose. Join on WhatsApp."
+  },
+  {
+    "id": "remote_virus",
+    "label": "scam",
+    "text": "Your computer has a virus. Allow remote access so our technician can remove it."
+  },
+  {
+    "id": "pch_prize",
+    "label": "scam",
+    "text": "Congratulations, your Publishers Clearing House prize of $2.5M is ready. Send a $300 release fee."
+  },
+  {
+    "id": "dad_new_phone",
+    "label": "scam",
+    "text": "Text from Dad: new phone, who dis? Need you to pay a bill for me, will pay you back."
+  },
+  {
+    "id": "netflix_vip",
+    "label": "scam",
+    "text": "Netflix: payment failed. Update your card at netflix-billing.vip/update."
+  },
+  {
+    "id": "pharmacy",
+    "label": "legit",
+    "text": "CVS Pharmacy: Your prescription is ready for pickup at your usual store."
+  },
+  {
+    "id": "bank_fraud_alert",
+    "label": "legit",
+    "text": "Chase fraud alert: Did you attempt a $48.20 purchase at Walmart? Reply YES or NO. We will never ask for your password or full card number."
+  },
+  {
+    "id": "otp",
+    "label": "legit",
+    "text": "Your verification code is 482913. Do not share this code with anyone."
+  },
+  {
+    "id": "amazon_delivered",
+    "label": "legit",
+    "text": "Amazon: your package was delivered to your front door."
+  },
+  {
+    "id": "usps_out",
+    "label": "legit",
+    "text": "USPS: your package is out for delivery today."
+  },
+  {
+    "id": "grandma_pickup",
+    "label": "legit",
+    "text": "Hi Grandma, can you pick me up from practice at 5? Mom is at work."
+  },
+  {
+    "id": "son_hospital",
+    "label": "legit",
+    "text": "My son is in the hospital for a minor surgery, please keep him in your prayers."
+  },
+  {
+    "id": "utility_bill",
+    "label": "legit",
+    "text": "Duke Energy: your bill of $112.40 is due Nov 3. Pay online or call the number on your statement."
+  },
+  {
+    "id": "appointment",
+    "label": "legit",
+    "text": "Please confirm your appointment with Dr. Lee on Nov 4 by replying YES."
+  },
+  {
+    "id": "statement",
+    "label": "legit",
+    "text": "Your October statement is ready. Log in to the official app to view it."
+  },
+  {
+    "id": "medicare_notice",
+    "label": "legit",
+    "text": "Medicare: your Medicare Summary Notice is available online at https://www.medicare.gov."
+  },
+  {
+    "id": "family_dinner",
+    "label": "legit",
+    "text": "Dinner at 6 on Sunday, bring the pie. Love, Mom"
+  },
+  {
+    "id": "zelle_sent",
+    "label": "legit",
+    "text": "Your Zelle payment of $50 to Sarah was sent."
+  },
+  {
+    "id": "fedex_sched",
+    "label": "legit",
+    "text": "FedEx: your delivery is scheduled for tomorrow between 10am and 2pm."
+  },
+  {
+    "id": "refill",
+    "label": "legit",
+    "text": "Walgreens: refill reminder for your blood pressure prescription."
+  },
+  {
+    "id": "bank_warning",
+    "label": "legit",
+    "text": "Wells Fargo: we will never call or text to ask for your PIN or one-time code. If someone does, hang up."
+  },
+  {
+    "id": "new_baby",
+    "label": "legit",
+    "text": "Congratulations on the new baby! We are so happy for you both."
+  },
+  {
+    "id": "donation",
+    "label": "legit",
+    "text": "Thank you for your donation of $50 to First Baptist Church."
+  },
+  {
+    "id": "bingo",
+    "label": "legit",
+    "text": "I won the bingo game last night! Want to come on Saturday?"
+  },
+  {
+    "id": "ssa_letter",
+    "label": "legit",
+    "text": "Social Security Administration: your cost-of-living adjustment letter is available in your my Social Security account at https://www.ssa.gov."
+  },
+  {
+    "id": "neighbor",
+    "label": "legit",
+    "text": "Hi, it's your neighbor. I'm at the hospital with my husband, can you feed the cat tonight?"
+  },
+  {
+    "id": "card_back",
+    "label": "legit",
+    "text": "Please call the number on the back of your card if you did not make this purchase."
+  },
+  {
+    "id": "netflix_renew",
+    "label": "legit",
+    "text": "Your Netflix subscription has been renewed for $15.49."
+  },
+  {
+    "id": "wont_come",
+    "label": "legit",
+    "text": "I won't be able to make it Thursday, can we do Friday instead?"
+  },
+  {
+    "id": "gift_birthday",
+    "label": "legit",
+    "text": "Thanks for the gift card, Grandma! I used it to get a new book."
+  },
+  {
+    "id": "verify_appt",
+    "label": "legit",
+    "text": "Can you send me the address for the party on Saturday?"
+  },
+  {
+    "id": "airport_pickup",
+    "label": "legit",
+    "text": "Hi Grandpa, we land at 3pm Friday. Can you pick us up at the airport?"
+  },
+  {
+    "id": "kroger_points",
+    "label": "legit",
+    "text": "Kroger: your fuel points expire Nov 30. Use them at the pump."
+  },
+  {
+    "id": "bank_stmt_sept",
+    "label": "legit",
+    "text": "Your bank statement for September is ready. Sign in to your account at the official website to view it."
+  },
+  {
+    "id": "flu_shot",
+    "label": "legit",
+    "text": "Reminder: your flu shot appointment is tomorrow at 10am at Walgreens."
+  },
+  {
+    "id": "lyft",
+    "label": "legit",
+    "text": "Your Lyft ride is arriving in 3 minutes."
+  },
+  {
+    "id": "verizon_bill",
+    "label": "legit",
+    "text": "Verizon: your bill of $87.12 is ready. Autopay will draft on Nov 5."
+  },
+  {
+    "id": "bike_accident",
+    "label": "legit",
+    "text": "My daughter had an accident on her bike but she's fine. Thanks for the casserole!"
+  },
+  {
+    "id": "irs_received",
+    "label": "legit",
+    "text": "IRS: Your tax return was received and is being processed. Check status at irs.gov/refunds."
+  },
+  {
+    "id": "citi_otp",
+    "label": "legit",
+    "text": "Citibank: Your one-time code is 774412. Never share this code with anyone, including Citi employees."
+  },
+  {
+    "id": "church_roof",
+    "label": "legit",
+    "text": "The church will hold a fundraiser to raise money for the new roof. Please send any donations by check to the office."
+  }
+]

@@ -4,7 +4,7 @@ Scam Shield is a senior-friendly scam detection web app. Paste a suspicious mess
 
 ## Current version
 
-**v0.2 integration in progress — screenshot OCR and rule-based detection**
+**v0.2 — improved rule engine and screenshot OCR**
 
 The current engine looks for common scam patterns such as:
 
@@ -47,40 +47,71 @@ streamlit run app.py
 ## Run tests
 
 ```bash
-pytest
+python -m pytest -q
+python evaluate.py
 ```
+
+## v0.2 workflow
+
+Paste a message or upload a PNG, JPEG, or WebP screenshot/photo. Review and correct
+OCR text before checking it. Select how it reached you: text, email, phone call,
+pop-up, or social media. Phone calls include advice to hang up and independently
+call back.
+
+The app shows High / Medium / Low risk, plain-language warning signs, safe next
+steps, and a family-share summary. Numeric scores stay internal. Recovery and
+reporting guidance is available even before analysis. Specific reporting phone
+numbers and direct links are not displayed because current official information
+could not be verified from the development environment.
+
+The deterministic detector uses `rules.py`, text normalization, safety-warning
+negation, hard scam signals, combination bonuses, and URL inspection for
+shorteners, IP addresses, look-alike domains, and hidden destinations. These are
+heuristics; links are not visited and no reputation service is queried. OCR runs
+locally through Tesseract. This release does not use an AI provider or add app-level
+storage of messages/screenshots.
+
+## Regression evaluation
+
+`tests/data/labeled_messages.json` contains 74 supplied synthetic examples: 38
+scams and 36 legitimate messages. `tests/data/build_dataset.py` rebuilds that file.
+`evaluate.py` reports scam recall (High or Medium), false-clear rate (scams rated
+Low), high-risk precision, and false-warning rate (legitimate examples rated High
+or Medium). It fails if scam recall falls below 90% or any legitimate example is
+rated High, matching the supplied regression test contract.
+
+Local v0.2 validation: 38 tests passed, all 38 synthetic scams were flagged,
+and all 36 legitimate examples were rated Low. These examples were developed
+alongside the rules; the results do not establish real-world accuracy. Keep a
+separate validation set for future accuracy claims. GitHub Actions is configured
+to run tests, OCR checks, dependency checks, and evaluation on pull requests.
 
 ## Project structure
 
 ```text
 scam-shield/
 ├── app.py
+├── image_processor.py
 ├── scam_detector.py
+├── rules.py
+├── evaluate.py
 ├── requirements.txt
-├── README.md
+├── packages.txt
 └── tests/
-    └── test_scam_detector.py
+    ├── test_scam_detector.py
+    ├── test_v02_workflow.py
+    ├── test_evaluate.py
+    └── data/
+        ├── build_dataset.py
+        └── labeled_messages.json
 ```
 
-## v0.2 workflow
-
-Paste a message or upload a PNG, JPEG, or WebP screenshot/photo. Review and correct
-OCR text before checking it. The app shows a risk verdict, warning signs, safe next
-steps, and a summary to share with family. OCR runs locally through Tesseract;
-this release does not send messages to an AI provider.
-
-Urgent cryptocurrency requests retain the existing combination bonus and return
-LIKELY SCAM. Government threats now recognize “arrested,” and gift card rules
-recognize both singular and plural wording.
-
-The complete v0.2 integration requirements and outstanding supplied-file inputs
-are recorded in `docs/CODEX_HANDOFF.md` and `CODEX_HANDOFF.md`.
-
-## Future AI analysis
+## Planned v0.3 — AI-assisted second opinion
 
 An optional AI layer remains future work. Select a provider, define structured
 outputs and fallback behavior, and agree on privacy and credential handling before
-implementation.
+implementation. Deterministic rules remain first; AI must not override strong
+scam signals with false reassurance.
 
 ## Release workflow
 
