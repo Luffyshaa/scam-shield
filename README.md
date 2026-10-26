@@ -4,7 +4,7 @@ Scam Shield is a senior-friendly scam detection web app. Paste a suspicious mess
 
 ## Current version
 
-**v0.1 — rule-based detector**
+**v0.2 — screenshot OCR and rule-based detection**
 
 The current engine looks for common scam patterns such as:
 
@@ -28,7 +28,8 @@ The app deliberately avoids saying a low-risk message is definitely legitimate. 
 
 ## Run locally
 
-1. Install Python 3.10 or newer.
+1. Install Python 3.10 or newer and Tesseract OCR with English language data.
+   On Debian/Ubuntu: `sudo apt-get install tesseract-ocr tesseract-ocr-eng`.
 2. Clone this repository.
 3. Create and activate a virtual environment.
 4. Install the dependencies:
@@ -61,9 +62,30 @@ scam-shield/
     └── test_scam_detector.py
 ```
 
-## Planned v0.2
+## v0.2 workflow
 
-The next version will keep the rule engine and add an AI analysis layer for unfamiliar scam scripts, plus screenshot/image input with OCR. The AI output should be constrained to structured fields such as risk level, confidence, red flags, explanation, and recommended actions.
+Paste a message or upload a PNG, JPEG, or WebP screenshot/photo. Review and correct
+OCR text before checking it. The app shows a risk verdict, warning signs, safe next
+steps, and a summary to share with family. OCR runs locally through Tesseract;
+this release does not send messages to an AI provider.
+
+Urgent cryptocurrency requests retain the existing combination bonus and return
+LIKELY SCAM. Government threats now recognize “arrested,” and gift card rules
+recognize both singular and plural wording.
+
+## Future AI analysis
+
+An optional AI layer remains future work. Select a provider, define structured
+outputs and fallback behavior, and agree on privacy and credential handling before
+implementation.
+
+## Release workflow
+
+Read `AGENTS.md` and `CODEX_HANDOFF.md`. Develop on
+`codex/v0.2-integration`, run tests, and open a pull request targeting `main`.
+Merge after review. In Streamlit Community Cloud, configure `main` and `app.py`;
+`requirements.txt` supplies Python dependencies and `packages.txt` installs
+Tesseract. Verify text analysis and screenshot OCR after deployment.
 
 ## Safety note
 

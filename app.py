@@ -193,7 +193,7 @@ if check_clicked:
             label_visibility="collapsed",
         )
 
-        if verdict != "NO RED FLAGS":
+        if verdict != "NO OBVIOUS RED FLAGS":
             st.warning(
                 "Do not use phone numbers, links, or contact details from the suspicious message itself. "
                 "Find the official contact information independently."

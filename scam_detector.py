@@ -12,9 +12,9 @@ class RedFlag:
 
 
 RULES = [
-    ("government_threat", r"\b(irs|social security|medicare|police|sheriff|federal agent|government)\b.*\b(arrest|warrant|suspend|lawsuit|legal action|jail)\b", "Government threat", "Scammers often pretend to be government agencies and threaten arrest, lawsuits, or benefit suspension.", 35),
+    ("government_threat", r"\b(irs|social security|medicare|police|sheriff|federal agent|government)\b.*\b(arrest(?:ed)?|warrant|suspend|lawsuit|legal action|jail)\b", "Government threat", "Scammers often pretend to be government agencies and threaten arrest, lawsuits, or benefit suspension.", 35),
     ("urgent_action", r"\b(act now|immediately|urgent|right away|within \d+ (minutes|hours)|final warning|last chance)\b", "Pressure to act fast", "Scammers create urgency so you do not have time to verify the story.", 15),
-    ("gift_card", r"\b(gift card|itunes card|apple card|google play card|steam card)\b", "Gift card payment", "Legitimate organizations almost never demand payment with gift cards.", 30),
+    ("gift_card", r"\b(gift cards?|itunes cards?|apple cards?|google play cards?|steam cards?)\b", "Gift card payment", "Legitimate organizations almost never demand payment with gift cards.", 30),
     ("crypto", r"\b(bitcoin|crypto|cryptocurrency|usdt|wallet address)\b", "Cryptocurrency request", "Scammers often request cryptocurrency because transfers are difficult to reverse.", 25),
     ("wire_payment", r"\b(wire transfer|western union|moneygram|zelle|cash app|venmo)\b", "Hard-to-reverse payment", "Requests for instant or hard-to-reverse payments are a common scam warning sign.", 20),
     ("prize", r"\b(winner|won|prize|lottery|sweepstakes|jackpot)\b", "Unexpected prize", "Unexpected prizes are commonly used to lure people into paying fees or sharing personal information.", 25),
