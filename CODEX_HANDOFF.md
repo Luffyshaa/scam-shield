@@ -1,31 +1,28 @@
-# Scam Shield v0.2 handoff
+# v0.2 integration status
 
-## Scope and decisions
+The authoritative release requirements are in docs/CODEX_HANDOFF.md and AGENTS.md.
+The user confirmed OCR and detection fixes; AI remains v0.3 work.
 
-Release the existing screenshot/photo OCR flow alongside paste-text analysis.
-Retain the deterministic rule engine, editable OCR text, plain-language risk
-verdicts, safe next steps, and family-share summaries. AI analysis is deferred
-pending a provider and privacy/credential decisions; the README previously listed
-it as planned, but no provider integration exists.
+## Implemented and validated
 
-Keep the existing urgent-payment combination bonus: Bitcoin plus urgency scores
-55 and is LIKELY SCAM; Bitcoin alone scores 25 and is BE CAREFUL. Correct the stale
-test expectation instead of lowering the risk score. Fix government threats using
-“arrested” and singular/plural gift card detection. Use the actual low-risk verdict
-constant when deciding whether to display the additional warning.
+- Preserved screenshot/photo upload, OCR correction, and family summaries.
+- Fixed government-threat matching for “arrested” and plural gift card wording.
+- Preserved the urgent cryptocurrency bonus (score 55, LIKELY SCAM); corrected
+  the stale test expectation and tested crypto without urgency (25, BE CAREFUL).
+- Corrected the low-risk verdict comparison controlling the additional warning.
+- Added UI submission, empty-input, OCR, and invalid-image regression coverage.
+- 17 tests passed locally, with no skips; dependency validation passed.
 
-## Acceptance criteria
+## Outstanding before the full v0.2 release
 
-- Existing detector tests and new regression tests pass.
-- Text submission renders the expected verdict and family-share summary.
-- Low-risk input retains the safety caveat without the extra high-risk warning.
-- Screenshot OCR extracts English text, allows review, and handles unreadable or
-  invalid images with the existing friendly error.
-- Python dependency checks and Streamlit startup succeed.
+The remote handoff describes user-supplied rules.py, an improved detector,
+evaluate.py, and a 74-example labeled dataset. Those files are not present in
+this checkout or the fetched integration branch. Obtain the original files;
+do not invent a replacement dataset or claim the documented evaluation passed.
+Integrate normalization, negation, link inspection, channel context, risk levels,
+and recovery/help UI against those files. Remove numeric scores from the UI and
+family summary per AGENTS.md. Run pytest and python evaluate.py before proposing
+merge. The current changes are a tested partial integration, not release signoff.
 
-## Delivery
-
-Branch: codex/v0.2-integration. Pull request target: main. Review before merging;
-production deployment is a separate step requiring authorization. Streamlit uses
-app.py, requirements.txt, and packages.txt. Verify production text and OCR flows
-after deployment. Do not claim production validation from local tests.
+Do not merge main or deploy production automatically. Preserve existing remote
+branch history and keep OCR working throughout the integration.

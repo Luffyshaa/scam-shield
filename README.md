@@ -4,7 +4,7 @@ Scam Shield is a senior-friendly scam detection web app. Paste a suspicious mess
 
 ## Current version
 
-**v0.2 — screenshot OCR and rule-based detection**
+**v0.2 integration in progress — screenshot OCR and rule-based detection**
 
 The current engine looks for common scam patterns such as:
 
@@ -72,6 +72,9 @@ this release does not send messages to an AI provider.
 Urgent cryptocurrency requests retain the existing combination bonus and return
 LIKELY SCAM. Government threats now recognize “arrested,” and gift card rules
 recognize both singular and plural wording.
+
+The complete v0.2 integration requirements and outstanding supplied-file inputs
+are recorded in `docs/CODEX_HANDOFF.md` and `CODEX_HANDOFF.md`.
 
 ## Future AI analysis
 
